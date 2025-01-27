@@ -79,10 +79,11 @@ with right_col:
     st.subheader("Results")
     if st.sidebar.button("Run"):
         executable_path = os.path.abspath("AniDomNetAnomaly.py" if anomaly_detection else "AniDomNet.py")
+        python_executable = sys.executable
         if not os.path.isfile(file_path):
             st.error("File not found! Please upload a valid CSV file.")
         else:
-            cmd = ["python", executable_path,
+            cmd = [python_executable, executable_path,
                    "-file", file_path,
                    "-outfolder", "./",
                    "-n", str(n_initializations),
