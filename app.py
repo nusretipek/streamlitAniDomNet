@@ -4,6 +4,7 @@ import numpy as np
 import subprocess
 import tempfile
 import os
+import sys
 from io import BytesIO
 
 running_process = None
