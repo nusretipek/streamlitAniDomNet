@@ -69,7 +69,7 @@ class DomNetwork:
             self.trainPred[i] = (c_int * len(dim1))(*dim1)  
         
         # Set C Function
-        self.domnet = CDLL("./anidomnetW.so")
+        self.domnet = CDLL("./anidomnet.so")
         self.domnet.calculateLossCauchy.argtypes = [POINTER(c_double), POINTER(POINTER(c_int)), c_int, c_int]
         self.domnet.calculateLossCauchy.restype = POINTER(c_double)        
         self.domnet.getScores.argtypes = [POINTER(c_double), POINTER(POINTER(c_int)), c_int, c_int]
@@ -324,7 +324,7 @@ def optimizeBFGS(dataset, seed, initials):
 
     scores = domModel.getFullScores()
     params = domModel.bestParamsAccuracy
-    #print(str(seed).ljust(5), str(round(domModel.bestAccuracyLoss, 3)).ljust(5), str(round(domModel.bestAccuracy, 4)).ljust(5))#, str(round(testAccuracy, 4)).ljust(5))
+    print(str(seed).ljust(5), str(round(domModel.bestAccuracyLoss, 3)).ljust(5), str(round(domModel.bestAccuracy, 4)).ljust(5))#, str(round(testAccuracy, 4)).ljust(5))
     return domModel.bestAccuracyLoss, domModel.bestAccuracy, domModel.initials, params, scores
  
 
