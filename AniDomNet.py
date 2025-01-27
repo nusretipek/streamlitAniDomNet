@@ -69,7 +69,7 @@ class DomNetwork:
             self.trainPred[i] = (c_int * len(dim1))(*dim1)  
         
         # Set C Function
-        self.domnet = CDLL("./anidomnetW.so")
+        self.domnet = CDLL("./anidomnet.so")
         self.domnet.calculateLossCauchy.argtypes = [POINTER(c_double), POINTER(POINTER(c_int)), c_int, c_int]
         self.domnet.calculateLossCauchy.restype = POINTER(c_double)        
         self.domnet.getScores.argtypes = [POINTER(c_double), POINTER(POINTER(c_int)), c_int, c_int]
