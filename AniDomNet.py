@@ -324,7 +324,7 @@ def optimizeBFGS(dataset, seed, initials):
 
     scores = domModel.getFullScores()
     params = domModel.bestParamsAccuracy
-    #print(str(seed).ljust(5), str(round(domModel.bestAccuracyLoss, 3)).ljust(5), str(round(domModel.bestAccuracy, 4)).ljust(5))#, str(round(testAccuracy, 4)).ljust(5))
+    print(str(seed).ljust(5), str(round(domModel.bestAccuracyLoss, 3)).ljust(5), str(round(domModel.bestAccuracy, 4)).ljust(5))#, str(round(testAccuracy, 4)).ljust(5))
     return domModel.bestAccuracyLoss, domModel.bestAccuracy, domModel.initials, params, scores
  
 
