@@ -1,5 +1,5 @@
 numpy==1.26.0       # Array processing
-pandas==2.1.1      # Data manipulation and analysis
+pandas==2.1.1       # Data manipulation and analysis
 scipy==1.11.3       # Scientific computing and optimization
 HierarchiaPy>=0.2.6 # Animal dominance analysis
 networkx>=3.2.1     # Network analysis and graph algorithms
