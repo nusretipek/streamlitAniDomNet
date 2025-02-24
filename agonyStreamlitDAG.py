@@ -22,7 +22,7 @@ class agonyBasedDAG:
 
         # Copy elements from strictly upper triable to NxN format
         self.copyElements()
-        self.matrix = np.round(self.matrix).astype(int)
+        #self.matrix = np.round(self.matrix).astype(int)
 
         # Get network graph
         self.graph = self.buildGraph()
