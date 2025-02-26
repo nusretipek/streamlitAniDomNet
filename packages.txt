@@ -1,7 +1,0 @@
-gcc
-gfortran
-libblas3
-liblapack3
-libc6
-libgfortran5
-libgcc-s1
