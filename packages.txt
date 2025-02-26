@@ -1,7 +1,7 @@
-gcc=11.2.0-1
-gfortran=11.2.0-1
-libblas3=3.10.0-2
-liblapack3=3.10.0-2
-libc6=2.35-0
-libgfortran5=12.3.0-1
-libgcc-s1=12.3.0-1
+gcc=11.*
+gfortran=11.*
+libblas3=3.*
+liblapack3=3.*
+libc6=2.*
+libgfortran5=12.*
+libgcc-s1=12.*
